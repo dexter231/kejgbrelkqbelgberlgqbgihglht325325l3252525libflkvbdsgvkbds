@@ -29,7 +29,7 @@ def escape_markdown_v2(text):
     escaped_text = ''.join('\\' + char if char in escape_chars else char for char in text)
     escaped_text = re.sub(r'\*+', '*', escaped_text)  # replace consecutive * with one *
     escaped_text = re.sub(r'(?<=\s)\*(?=\s)', ' ', escaped_text)  # remove single * marks
-    escaped_text = re.sub(r'## (.*?)(?=\n)', r'**\1**', escaped_text)  # add __ to sentences starting with ##
+    escaped_text = re.sub(r'## (.*?)(?=\n)', r'*_\1_*', escaped_text)  # add __ to sentences starting with ##
     escaped_text = re.sub(r'```', """```\n""", escaped_text)  # add new line at start of every ```
     return escaped_text
 
