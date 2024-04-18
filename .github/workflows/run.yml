@@ -17,4 +17,4 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           BOT_NAME: ${{ secrets.BOT_NAME }}
           GEMINI_API: ${{ secrets.GEMINI_API }}
-        run: ls
+        run: python endpoint_tg.py
