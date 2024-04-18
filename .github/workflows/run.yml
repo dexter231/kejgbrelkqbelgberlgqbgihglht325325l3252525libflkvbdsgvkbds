@@ -16,5 +16,5 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           BOT_NAME: ${{ secrets.BOT_NAME }}
-          GEMINI_API: ${{ GEMINI_API }}
+          GEMINI_API: ${{ secrets.GEMINI_API }}
         run: ls
