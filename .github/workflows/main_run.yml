@@ -1,4 +1,4 @@
-name: Run Python Script
+name: Main Run Python Script
 
 on:
   workflow_run:
