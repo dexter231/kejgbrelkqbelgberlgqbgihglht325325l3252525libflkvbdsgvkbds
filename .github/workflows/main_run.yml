@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: "15 */6 * * *" # Runs every 6 hours and 15 minutes
+    - cron: "0 */6 * * *" # Runs every 6 hours
 
 jobs:
   run_script:
