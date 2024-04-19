@@ -31,14 +31,13 @@ safety_settings = [
 
 class gemini:
     def __init__(self,system_msg):
-        self.history = []
         self.model = genai.GenerativeModel(model_name="gemini-1.5-pro-latest",
                                 generation_config=generation_config,
                                 safety_settings=safety_settings,
                                 system_instruction=system_msg)
-        self.convo = self.model.start_chat(self.history)
+        self.convo = self.model.start_chat(history=[])
     def reset(self):
-        self.history=[]
+        self.convo.history = []
 
     def get_response(self, input):
         self.convo.send_message(input)
@@ -49,3 +48,4 @@ class gemini:
 
 # res=llm.get_response("hello")
 # print(res)
+# llm.reset()
