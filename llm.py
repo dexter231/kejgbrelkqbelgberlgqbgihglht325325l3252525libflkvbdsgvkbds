@@ -36,7 +36,7 @@ class gemini:
                                 generation_config=generation_config,
                                 safety_settings=safety_settings,
                                 system_instruction=system_msg)
-        self.convo = self.model.start_chat(history)
+        self.convo = self.model.start_chat(self.history)
     def reset(self):
         self.history=[]
 
