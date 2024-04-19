@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   workflow_run:
-    workflows: ["main_run"]
+    workflows: ["Main Run Python Script"]
     types:
       - completed
 
