@@ -1,5 +1,11 @@
 name: Run Python Script
-on:  [push]
+
+on:
+  workflow_run:
+    workflows: ["main_run"]
+    types:
+      - completed
+
 jobs:
   run_script:
     runs-on: ubuntu-latest
