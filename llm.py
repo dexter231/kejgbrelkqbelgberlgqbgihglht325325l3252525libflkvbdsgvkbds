@@ -38,7 +38,7 @@ class gemini:
                                 system_instruction=system_msg)
         self.convo = self.model.start_chat()
     def reset(self):
-        self.history.clear()
+        self.history=[]
 
     def get_response(self, input):
         self.convo.send_message(input)
