@@ -35,7 +35,7 @@ def escape_markdown_v2(text):
     return escaped_text
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-
+    llm.reset()
     await context.bot.send_message(chat_id=update.effective_chat.id, text="hey I'm up!")
 
 
